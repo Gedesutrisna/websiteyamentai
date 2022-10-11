@@ -85,11 +85,12 @@ section{
 }
 .home .content{
     flex: 1 1 40rem;
-    padding-top: 6.5rem;
+    padding-top: 3rem;
 }
 .home .image{
     flex: 1 1 40rem;
     padding: 1rem;
+    float: right;
 }
 .home .content p{
     padding: 1rem 0;
@@ -98,11 +99,9 @@ section{
     font-size: 32px;
     color: rgb(255, 157, 0);
 }
-.image{
-    float: right;
-}
 .image img{
     border-radius: 10px;
+    width: 100%;
 }
 .btn{
     display: inline-block;
