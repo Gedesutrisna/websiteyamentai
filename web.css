@@ -132,8 +132,6 @@ section{
     overflow: hidden;
     width: 100%;
     max-width: 100%;
-    min-height: 522px;
-    min-width: 370px;
     background: transparent;
 }
 .card-container {
