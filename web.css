@@ -74,7 +74,9 @@ header ul li a:hover{
 section{
     padding: 50px 20px;
 }
-
+.utama{
+    border-bottom: 2px solid;
+}
 /*halaman home*/
 .home{
     display: flex;
@@ -85,7 +87,7 @@ section{
 }
 .home .content{
     flex: 1 1 40rem;
-    padding-top: 6.5rem;
+    padding-top: 3rem;
 }
 .home .image{
     flex: 1 1 40rem;
@@ -98,9 +100,6 @@ section{
 .home .content h2{
     font-size: 32px;
     color: rgb(255, 157, 0);
-}
-.image{
-    float: right;
 }
 .image img{
     border-radius: 10px;
