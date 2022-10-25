@@ -1,3 +1,22 @@
+<?php
+include "fungsi.php";
+
+if (isset($_POST['submit'])){
+    $nama = $_POST['nama'];
+    $alamat_email = $_POST['alamat_email'];
+    $telephone = $_POST['telephone'];
+    $pesan = $_POST['pesan'];
+
+    $sql = "INSERT INTO form (nama, alamat_email, telephone, pesan)
+    VALUES ('$nama', '$alamat_email', '$telephone', '$pesan')";
+
+    if ($conn->query($sql) === TRUE){
+        echo "<script> alert ('pesan anda terkirim')</script>";
+    } else {
+        echo "error:" . $sql . "<br>". $conn->error;
+    }
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +33,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="testimoni.html">Testimoni</a></li>
             <li><a href="product.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="Galery.html">Galery</a></li>
         </ul>
     </div>
@@ -25,7 +44,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="testimoni.html">Testimoni</a></li>
             <li><a href="product.html">Products</a></li>
-            <li><div class="utama"><a href="contact.html">Contact</a></div></li>
+            <li><div class="utama"><a href="contact.php">Contact</a></div></li>
             <li><a href="Galery.html">Galery</a></li>
         </ul>
         <label for="check" class="mobile-menu"><i class="fa-solid fa-bars fa-2x"></i></label>
@@ -49,13 +68,13 @@
                 </div>
                 <div class="kanan">
                     <div class="kanan-container">
-                        <form action="">
+                        <form action="" method="post">
                             <h2>Contact Us</h2>
-                            <input type="text" placeholder="Nama">
-                            <input type="email" placeholder="Alamat Email">
-                            <input type="phone" placeholder="Telephone" autocomplete="off">
-                            <textarea rows="10" placeholder="Pesan"></textarea>
-                            <button>Kirim</button>
+                            <input name="nama" type="text" placeholder="Nama">
+                            <input name="alamat_email" type="email" placeholder="Alamat Email">
+                            <input name="telephone" type="phone" placeholder="Telephone" autocomplete="off">
+                            <textarea name="pesan" rows="10" placeholder="Pesan"></textarea>
+                            <button name="submit" type="submit">Kirim</button>
                         </form>
                     </div>
                 </div>

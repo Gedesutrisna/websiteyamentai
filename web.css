@@ -98,8 +98,8 @@ section{
     padding: 1rem 0;
 }
 .home .content h2{
-    font-size: 32px;
     color: rgb(255, 157, 0);
+    padding-bottom: none;
 }
 .image img{
     border-radius: 10px;
@@ -142,20 +142,12 @@ section{
     height: 480px;
     background-color:  rgb(255, 157, 0);
 }
-.kanan {
-    display: flex;
-    flex: 1;
-    height: 460px;
-    justify-content: center;
-    align-items: center;
-}
 .kiri {
     display: flex;
     flex: 1;
     height: 522px;
     justify-content: center;
     align-items: center;
-
 }
 .kiri-container {
     height: 50%;
@@ -173,7 +165,19 @@ section{
     color: white;
     transition: .5s;
 }
-h2 {
+.kiri-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.kanan {
+    display: flex;
+    flex: 1;
+    height: 460px;
+    justify-content: center;
+    align-items: center;
+}
+.kanan-container h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #fff;
@@ -279,7 +283,7 @@ textarea {
     border-radius: .5rem;
 }
 .menu .box-container .box h3{
-    color:#333;
+    color: black;
     font-size: 2rem;
     padding-top: 1rem;
 }
@@ -295,15 +299,12 @@ textarea {
     color: rgb(255, 157, 0);
 }
 /*testimoni*/
-.testimonials{
-    padding: 40px 0;
-    text-align: center;
-}
 .test{
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
     padding: 0 20px;
+    text-align: center;
 }
 .row{
     display: flex;
@@ -352,6 +353,35 @@ textarea {
     max-width: 100%;
   }
   }
+/*pesan*/
+.pesan{
+    background-image: url(./img/masak.png);
+    background-size: cover;
+}
+.container2 {
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    margin: 0 10%;
+}
+.pesanan {
+    display: flex;
+    flex: 1;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.pesanan-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 157, 0);
+
+}
+.pesan-container {
+    width: 70%;
+    text-align: center;
+}
 /*footer*/
 footer{
     background-color: black;
@@ -382,4 +412,32 @@ footer small{
         padding: 24px 30px;
     }
     
+}
+@media (min-width:1024px) {
+    .sidebar{
+        display: none;
+    }
+    
+}
+/*loder*/
+
+.loader-container{
+    position: fixed;
+    top:0; left:0;
+    height:100%; 
+    width:100%;
+    z-index: 10000;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.loader-container img{
+    width:10rem;
+}
+
+.loader-container.fade-out{
+    top:-110%;
+    opacity:0;
 }
